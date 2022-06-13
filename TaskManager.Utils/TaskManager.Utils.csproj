@@ -46,6 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Copy.cs" />
+    <Compile Include="Cursor.cs" />
+    <Compile Include="DirectoryTree.cs" />
+    <Compile Include="DrawConsole.cs" />
     <Compile Include="GetShortPath.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

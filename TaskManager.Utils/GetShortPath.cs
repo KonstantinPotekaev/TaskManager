@@ -12,6 +12,17 @@ namespace TaskManager.Utils
     {
         public const uint MAX_LEN = 256;
 
+        /// <summary>
+        /// Функция для преобразование пути
+        /// </summary>
+        /// <param name="path">путь до директории</param>
+        /// <returns>укороченная директрия</returns>
+        public static string GetShortPath(string path)
+        {
+            StringBuilder shortPathName = new StringBuilder((int)API.MAX_LEN);
+            API.GetShortPathName(path, shortPathName, API.MAX_LEN);
+            return shortPathName.ToString();
+        }
 
         [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
         public static extern uint GetShortPathName(
