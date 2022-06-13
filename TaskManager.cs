@@ -142,6 +142,26 @@ namespace TaskManager
                             Copy.CopyDirectory(CommandParams[1], CommandParams[2], true);
                         }
                         break;
+                    case "rm":
+                        if (CommandParams.Length > 1)
+                        {
+                            try
+                            {
+                                if (!Directory.Exists(CommandParams[1]))
+                                    throw new DirectoryNotFoundException();
+                                Directory.Delete(CommandParams[1], true);
+                            }
+                            catch (DirectoryNotFoundException)
+                            {
+                                if (File.Exists(CommandParams[1]))
+                                {
+                                    File.Delete(CommandParams[1]);
+                                }
+                            }
+
+                        
+                        }
+                        break;
                 }
             }
             UpdateConsole();
