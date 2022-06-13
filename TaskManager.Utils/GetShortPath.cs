@@ -7,10 +7,14 @@ using System.Runtime.InteropServices;
 
 namespace TaskManager.Utils
 {
+   
     public static class API
     {
+        public const uint MAX_LEN = 256;
+
+
         [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
-        static extern uint GetShortPathName(
+        public static extern uint GetShortPathName(
         [MarshalAs(UnmanagedType.LPTStr)]
         string lpszLongPath,
         [MarshalAs(UnmanagedType.LPTStr)]
