@@ -112,7 +112,7 @@ namespace TaskManager
             {
                 switch (CommandParams[0])
                 {
-                    case "cd":
+                    /*case "cd":
                         if (CommandParams.Length > 1)
                         {
                             if (Directory.Exists(CommandParams[1]))
@@ -122,7 +122,7 @@ namespace TaskManager
 
                             }
                         }
-                        break;
+                        break;*/
                     case "ls":
                         if (CommandParams.Length > 1 && Directory.Exists(CommandParams[1]))
                         {
@@ -160,6 +160,15 @@ namespace TaskManager
                             }
 
                         
+                        }
+                        break;
+                    case "file":
+                        if (CommandParams.Length > 1)
+                        {
+                            if (File.Exists(CommandParams[1]))
+                            {
+                                FileInformation.Print(CommandParams[1]);
+                            }
                         }
                         break;
                 }

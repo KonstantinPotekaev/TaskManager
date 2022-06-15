@@ -50,6 +50,7 @@
     <Compile Include="Cursor.cs" />
     <Compile Include="DirectoryTree.cs" />
     <Compile Include="DrawConsole.cs" />
+    <Compile Include="FileInformation.cs" />
     <Compile Include="GetShortPath.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
